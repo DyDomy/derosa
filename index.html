@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Officina De Rosa Maddaloni | Meccanico Opel dal 1988</title>
+    <meta name="description" content="Officina meccanica De Rosa a Maddaloni. Dal 1988 specialisti Opel e tutte le marche. Tagliandi, riparazioni, revisioni, elettrauto. Chiama 0823 XXX XXX">
+    <meta name="keywords" content="meccanico maddaloni, officina maddaloni, opel maddaloni, tagliando maddaloni, elettrauto maddaloni, revisione auto maddaloni, gommista maddaloni, carrozzeria maddaloni">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.officinaderosa.it/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Officina De Rosa | Meccanico Maddaloni">
+    <meta property="og:description" content="Officina meccanica a Maddaloni dal 1988. Specialisti Opel, lavoriamo su tutte le marche.">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="geo.region" content="IT-CE">
+    <meta name="geo.placename" content="Maddaloni">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='65' text-anchor='middle' font-size='36' font-weight='300' fill='%23c9a227'%3EDR%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #c9a227;
+            --gold-light: #d4b44a;
+            --gold-dark: #a68521;
+            --gold-lighter: #e5c158;
+            --black: #000;
+            --black-soft: #0a0a0a;
+            --black-card: #1a1a1a;
+            --black-lighter: #2a2a2a;
+            --gray-dark: #0f0f0f;
+            --gray-darker: #141414;
+            --gray: #888;
+            --gray-light: #aaa;
+            --gray-lighter: #ccc;
+            --white: #fff;
+            --white-soft: #f5f5f5;
+            --silver: #e8e8e8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #050505 100%);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 300;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Subtle Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes goldShine {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Elegant Dividers */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .divider-icon {
+            color: var(--gold);
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 25px 0;
+            transition: all 0.5s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-icon::before {
+            display: none;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+            align-items: baseline;
+        }
+
+        .logo-text > div:first-child {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--gold);
+            display: inline;
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--white);
+            letter-spacing: 1px;
+            display: inline;
+            margin-left: 8px;
+        }
+
+        .logo-service {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--gray-light);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            flex-basis: 100%;
+            margin-top: 4px;
+        }
+
+        .logo-text span {
+            color: var(--gold);
+        }
+
+        .nav {
+            display: flex;
+            gap: 50px;
+        }
+
+        .nav a {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--gray-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 14px 28px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+
+        .header-cta:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .header-cta svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000 0%, #0f0f0f 50%, #000 100%);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(201, 162, 39, 0.04) 0%, transparent 40%),
+                radial-gradient(ellipse at 80% 10%, rgba(232, 232, 232, 0.01) 0%, transparent 60%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L30 60M0 30L60 30' stroke='%23c9a227' stroke-width='0.5'/%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 100px;
+            align-items: center;
+            padding: 140px 0 100px;
+        }
+
+        .hero-left {
+            animation: fadeIn 1.2s ease 0.3s both;
+        }
+
+        .hero-tagline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .hero-tagline-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero-tagline-text {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 62px;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .elegant {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: var(--gray);
+            margin-bottom: 50px;
+            max-width: 480px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            box-shadow: 0 20px 50px rgba(201, 162, 39, 0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .hero-right {
+            animation: fadeInUp 1.2s ease 0.6s both;
+        }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image-frame {
+            position: absolute;
+            inset: -15px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            pointer-events: none;
+        }
+
+        .hero-image-box {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #000 100%);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-placeholder {
+            text-align: center;
+            color: #333;
+        }
+
+        .hero-placeholder svg {
+            width: 60px;
+            height: 60px;
+            stroke: #2a2a2a;
+            margin-bottom: 15px;
+        }
+
+        .hero-placeholder p {
+            font-size: 12px;
+            color: #444;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-image-badge {
+            position: absolute;
+            bottom: -25px;
+            right: 30px;
+            background: var(--black);
+            border: 1px solid var(--gold);
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .hero-image-badge-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .hero-image-badge-text {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: var(--gray-light);
+            margin-top: 5px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            animation: fadeInUp 1.2s ease 1s both;
+        }
+
+        .stat {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* SERVIZI */
+        .servizi {
+            padding: 140px 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000 50%, #0a0a0a 100%);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .section-tag-line {
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-tag-text {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-size: 52px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 17px;
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .servizi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .servizio-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 50px 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .servizio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .servizio-card:hover::before {
+            opacity: 1;
+        }
+
+        .servizio-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 162, 39, 0.25);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 30px rgba(201, 162, 39, 0.1);
+            background: linear-gradient(135deg, #252525 0%, #151515 100%);
+        }
+
+        .servizio-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: rgba(201, 162, 39, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            line-height: 1;
+        }
+
+        .servizio-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .servizio-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--gold);
+            stroke-width: 1;
+            fill: none;
+        }
+
+        .servizio-card h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .servizio-card:hover h3 {
+            color: var(--gold);
+        }
+
+        .servizio-card p {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* CHI SIAMO */
+        .chi-siamo {
+            padding: 140px 0;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chi-siamo-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .chi-siamo-img {
+            position: relative;
+        }
+
+        .chi-siamo-img-frame {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 40px;
+            bottom: 40px;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            pointer-events: none;
+        }
+
+        .chi-siamo-img-main {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #000 100%);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .chi-siamo-img-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chi-siamo-img-accent {
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 160px;
+            height: 160px;
+            background: var(--black);
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .chi-siamo-img-accent::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 1px solid rgba(201, 162, 39, 0.3);
+        }
+
+        .chi-siamo-img-accent .year {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .chi-siamo-img-accent .text {
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--gray-light);
+            letter-spacing: 3px;
+            margin-top: 5px;
+        }
+
+        .chi-siamo-content h2 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .chi-siamo-content h2 span {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .chi-siamo-content p {
+            color: var(--gray);
+            font-size: 16px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .chi-siamo-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 45px;
+        }
+
+        .chi-siamo-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .chi-siamo-feature-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .chi-siamo-feature span {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* CONTATTI */
+        .contatti {
+            padding: 140px 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000 50%, #0a0a0a 100%);
+            position: relative;
+        }
+
+        .contatti-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contatti-info h2 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .contatti-info > p {
+            color: var(--gray);
+            font-size: 16px;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-item:hover {
+            border-color: rgba(201, 162, 39, 0.15);
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .info-text h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .info-text p, .info-text a {
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .info-text a:hover {
+            color: var(--gold);
+        }
+
+        .form-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 60px;
+            border: 1px solid rgba(201, 162, 39, 0.1);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-height: fit-content;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 700px;
+        }
+
+        .form-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 60px;
+            right: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .form-box h3 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            color: var(--gray-light);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px 20px;
+            background: #0a0a0a;
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            color: var(--white);
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 300;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: none;
+            min-height: 80px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+
+        .form-group select option {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .form-btns {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .btn-wa {
+            background: transparent;
+            border: 1px solid #25D366;
+            color: #25D366;
+        }
+
+        .btn-wa:hover {
+            background: #25D366;
+            color: var(--black);
+        }
+
+        /* MAPPA */
+        /* RECENSIONI */
+        .recensioni {
+            padding: 140px 0;
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recensioni-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .recensione-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 45px 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .recensione-card:hover {
+            border-color: rgba(201, 162, 39, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .recensione-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 25px;
+        }
+
+        .recensione-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold);
+        }
+
+        .recensione-text {
+            color: var(--gray-light);
+            font-size: 15px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-weight: 300;
+            flex-grow: 1;
+        }
+
+        .recensione-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: auto;
+        }
+
+        .recensione-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--black);
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .recensione-info h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .recensione-info span {
+            font-size: 12px;
+            color: var(--gray);
+            letter-spacing: 1px;
+        }
+
+        .recensione-quote {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: rgba(201, 162, 39, 0.08);
+            line-height: 1;
+        }
+
+        /* PARTNER */
+        .partner {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000 50%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner::before,
+        .partner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .partner::before {
+            left: 0;
+            background: linear-gradient(to right, var(--black-soft), transparent);
+        }
+
+        .partner::after {
+            right: 0;
+            background: linear-gradient(to left, var(--black-soft), transparent);
+        }
+
+        .partner-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .partner-header p {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .partner-track {
+            display: flex;
+            width: max-content;
+            animation: scrollPartner 20s linear infinite;
+        }
+
+        .partner-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollPartner {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .partner-logos {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            flex-shrink: 0;
+            padding: 0 50px;
+        }
+
+        .partner-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            height: 60px;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            transition: all 0.4s ease;
+        }
+
+        .partner-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* PARTNER INFO */
+        .partner-info {
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.08) 0%, rgba(201, 162, 39, 0.03) 100%);
+            padding: 50px 50px;
+            border: 1px solid rgba(201, 162, 39, 0.25);
+            border-radius: 8px;
+            margin-bottom: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .partner-info::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .partner-info h3 {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .partner-info h3 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .partner-info p {
+            color: var(--gray-light);
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 0;
+            max-width: 700px;
+        }
+
+        .partner-info strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .partner-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-top: 35px;
+            padding-top: 35px;
+            border-top: 1px solid rgba(201, 162, 39, 0.15);
+        }
+
+        .partner-benefit {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .partner-benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 4px;
+        }
+
+        .partner-benefit-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .partner-benefit-text h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .partner-benefit-text p {
+            font-size: 13px;
+            color: var(--gray);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .recensioni-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .recensione-card {
+                max-width: 600px;
+                width: 100%;
+            }
+
+            .partner-logos {
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .recensioni {
+                padding: 100px 0;
+            }
+
+            .partner {
+                padding: 60px 0;
+            }
+
+            .partner::before,
+            .partner::after {
+                width: 50px;
+            }
+
+            .partner-logos {
+                gap: 40px;
+            }
+
+            .partner-logo {
+                min-width: 120px;
+            }
+
+            .partner-info {
+                padding: 35px 30px;
+                margin-bottom: 50px;
+            }
+
+            .partner-info h3 {
+                font-size: 28px;
+            }
+
+            .partner-info p {
+                font-size: 14px;
+            }
+
+            .partner-benefits {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 25px;
+                padding-top: 25px;
+            }
+        }
+
+        /* MAPPA */
+        .mappa {
+            height: 450px;
+            position: relative;
+            display: block;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .mappa::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--black-soft), transparent);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .mappa::after {
+            display: none;
+        }
+
+        .mappa:hover::after {
+            opacity: 1;
+        }
+
+        .mappa iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(100%) contrast(1.2) brightness(0.6);
+            transition: filter 0.5s ease;
+        }
+
+        .mappa:hover iframe {
+            filter: grayscale(50%) contrast(1.1) brightness(0.7);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--black);
+            padding: 100px 0 40px;
+            border-top: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 80px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-top: 25px;
+            font-weight: 300;
+        }
+
+        .footer h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer ul a {
+            color: var(--gray);
+            font-size: 14px;
+            font-weight: 300;
+            transition: all 0.3s ease;
+        }
+
+        .footer ul a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        /* WHATSAPP */
+        .wa-float {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            width: 55px;
+            height: 55px;
+            background: var(--black);
+            border: 1px solid #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.4s ease;
+        }
+
+        .wa-float:hover {
+            background: #25D366;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3);
+        }
+
+        .wa-float svg {
+            width: 24px;
+            height: 24px;
+            fill: #25D366;
+            transition: fill 0.3s ease;
+        }
+
+        .wa-float:hover svg {
+            fill: var(--black);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            z-index: 9999;
+            padding: 120px 40px 40px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .mobile-menu nav a {
+            font-size: 28px;
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu nav a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            z-index: 10000;
+        }
+
+        .mobile-menu-close::before,
+        .mobile-menu-close::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            top: 50%;
+            left: 0;
+        }
+
+        .mobile-menu-close::before {
+            transform: rotate(45deg);
+        }
+
+        .mobile-menu-close::after {
+            transform: rotate(-45deg);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .hero-content {
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .hero-tagline {
+                justify-content: center;
+            }
+
+            .hero-desc {
+                margin: 0 auto 50px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .servizi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chi-siamo-inner {
+                grid-template-columns: 1fr;
+                gap: 80px;
+            }
+
+            .contatti-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 25px;
+            }
+
+            .nav, .header-cta {
+                display: none;
+            }
+
+            .menu-btn {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+                padding: 100px 25px 40px;
+            }
+
+            .mobile-menu nav a {
+                font-size: 24px;
+            }
+
+            .mobile-menu-close {
+                top: 25px;
+                right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-header h2 {
+                font-size: 38px;
+            }
+
+            .servizi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chi-siamo-content h2,
+            .contatti-info h2 {
+                font-size: 34px;
+            }
+
+            .chi-siamo-img-accent {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin: -30px auto 0;
+                width: 120px;
+                height: 120px;
+            }
+
+            .chi-siamo-img-accent .year {
+                font-size: 32px;
+            }
+
+            .chi-siamo-features {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .form-box {
+                padding: 40px 30px;
+            }
+
+            .form-btns {
+                flex-direction: column;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .stat:not(:last-child)::after {
+                display: none;
+            }
+
+            .hero-stats {
+                gap: 30px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Officina Meccanica De Rosa",
+        "description": "Officina meccanica a Maddaloni specializzata Opel dal 1988. Tagliandi, riparazioni motore, revisioni, elettrauto, gommista e carrozzeria per tutte le marche auto.",
+        "url": "https://www.officinaderosa.it",
+        "telephone": "+39-0823-XXXXXX",
+        "foundingDate": "1988",
+        "image": "https://www.officinaderosa.it/img/officina-de-rosa-meccanico-maddaloni.webp",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via [Indirizzo]",
+            "addressLocality": "Maddaloni",
+            "addressRegion": "CE",
+            "postalCode": "81024",
+            "addressCountry": "IT"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "41.04",
+            "longitude": "14.38"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "13:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "15:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "13:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Edvige Cutillo"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+                "reviewBody": "Disponibilità e competenza ad alti livelli! Non ho una Opel ma un Peugeot, tuttavia all'improvviso mentre ero per strada lontana da casa la macchina aveva cominciato a segnalare un problema di surriscaldamento. Non solo si sono messi a disposizione ma mi hanno momentaneamente risolto il problema in modo da tornare a casa con calma e risolvere definitivamente il problema."
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Fabrizio Forgillo"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+                "reviewBody": "Ottimo per professionalità e serietà."
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Domenico"},
+                "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+                "reviewBody": "Professionalità e cortesia."
+            }
+        ],
+        "areaServed": {
+            "@type": "City",
+            "name": "Maddaloni"
+        },
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "41.04",
+                "longitude": "14.38"
+            },
+            "geoRadius": "30000"
+        },
+        "knowsAbout": ["Opel", "Tagliando auto", "Riparazione motore", "Revisione auto", "Elettrauto", "Gommista", "Carrozzeria"],
+        "brand": [
+            {"@type": "Brand", "name": "Ayvens"},
+            {"@type": "Brand", "name": "UnipolRental"},
+            {"@type": "Brand", "name": "AutoHero"},
+            {"@type": "Brand", "name": "Castrol"},
+            {"@type": "Brand", "name": "Opel"},
+            {"@type": "Brand", "name": "Bosch"}
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="img/Opel-Logo (1).png" alt="Opel De Rosa logo">
+                    </div>
+                    <div class="logo-text">
+                        <div>Opel</div>
+                        <div class="logo-subtitle">De Rosa</div>
+                        <div class="logo-service">Service Autoricambi</div>
+                    </div>
+                </a>
+
+                <nav class="nav">
+                    <a href="#servizi">Servizi</a>
+                    <a href="#chi-siamo">Chi Siamo</a>
+                    <a href="#recensioni">Recensioni</a>
+                    <a href="#contatti">Contatti</a>
+                </nav>
+
+                <a href="tel:+390823XXXXXX" class="header-cta">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Prenota
+                </a>
+
+                <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Chiudi menu"></button>
+        <nav>
+            <a href="#servizi" onclick="toggleMenu()">Servizi</a>
+            <a href="#chi-siamo" onclick="toggleMenu()">Chi Siamo</a>
+            <a href="#recensioni" onclick="toggleMenu()">Recensioni</a>
+            <a href="#contatti" onclick="toggleMenu()">Contatti</a>
+            <a href="tel:+390823XXXXXX" onclick="toggleMenu()">Chiama Ora</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-pattern"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <div class="hero-tagline">
+                            <span class="hero-tagline-line"></span>
+                            <span class="hero-tagline-text">Maddaloni, Caserta</span>
+                        </div>
+                        <h1>La tua auto merita <span class="elegant">mani esperte</span></h1>
+                        <p class="hero-desc">Dal 1988 siamo il punto di riferimento per chi cerca professionalit&agrave; e competenza. Specialisti Opel, lavoriamo con cura su tutte le marche.</p>
+                        <div class="hero-btns">
+                            <a href="tel:+390823XXXXXX" class="btn btn-gold">
+                                Chiama Ora
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#contatti" class="btn btn-outline">
+                                Prenota Appuntamento
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-right">
+                        <div class="hero-image-container">
+                            <div class="hero-image-frame"></div>
+                            <div class="hero-image-box">
+                                <img src="img/Gemini_Generated_Image_c7gkifc7gkifc7gk.png" alt="Officina De Rosa">
+                            </div>
+                            <div class="hero-image-badge">
+                                <div class="hero-image-badge-year">1988</div>
+                                <div class="hero-image-badge-text">DAL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">37+</div>
+                        <div class="stat-label">Anni di esperienza</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Auto riparate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Clienti soddisfatti</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servizi" id="servizi">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-tag">
+                        <span class="section-tag-line"></span>
+                        <span class="section-tag-text">I Nostri Servizi</span>
+                        <span class="section-tag-line"></span>
+                    </div>
+                    <h2>Eccellenza Meccanica</h2>
+                    <p>Ogni intervento eseguito con precisione e attenzione ai dettagli</p>
+                </div>
+
+                <div class="servizi-grid">
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">01</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Tagliandi</h3>
+                        <p>Manutenzione programmata per ogni marca con ricambi originali o equivalenti certificati</p>
+                    </div>
+
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">02</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <h3>Riparazioni Motore</h3>
+                        <p>Diagnosi computerizzata avanzata, distribuzione, frizione e interventi completi</p>
+                    </div>
+
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">03</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                        </div>
+                        <h3>Revisioni</h3>
+                        <p>Centro autorizzato per revisioni ministeriali auto e moto</p>
+                    </div>
+
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">04</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12.5 7H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                        </div>
+                        <h3>Climatizzazione</h3>
+                        <p>Ricarica gas A/C, sanificazione impianto e diagnosi climatizzatore</p>
+                    </div>
+
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">05</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4z"/></svg>
+                        </div>
+                        <h3>Autoricambi</h3>
+                        <p>Ricambi originali e equivalenti certificati per tutte le marche auto</p>
+                    </div>
+
+                    <div class="servizio-card animate-on-scroll">
+                        <span class="servizio-number">06</span>
+                        <div class="servizio-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </div>
+                        <h3>Check-Up Auto</h3>
+                        <p>Controllo completo prima di un viaggio o acquisto auto usata con report</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chi-siamo" id="chi-siamo">
+            <div class="container">
+                <div class="chi-siamo-inner">
+                    <div class="chi-siamo-img animate-on-scroll">
+                        <div class="chi-siamo-img-frame"></div>
+                        <div class="chi-siamo-img-main">
+                            <img src="img/Meccanico-20250819-Greenstyle.it-1-1.jpg" alt="Famiglia De Rosa - Officina meccanica Maddaloni">
+                        </div>
+                        <div class="chi-siamo-img-accent">
+                            <span class="year">1988</span>
+                            <span class="text">DAL</span>
+                        </div>
+                    </div>
+
+                    <div class="chi-siamo-content animate-on-scroll">
+                        <div class="section-tag">
+                            <span class="section-tag-line"></span>
+                            <span class="section-tag-text">Chi Siamo</span>
+                        </div>
+                        <h2>La famiglia <span>De Rosa</span></h2>
+                        <p>Un'officina a conduzione familiare nel cuore di Maddaloni. Abbiamo iniziato nel 1988 con un ponte sollevatore usato e tanta passione per i motori.</p>
+                        <p>Specializzati Opel, lavoriamo su tutte le marche con la stessa dedizione e competenza. Da noi trovi artigiani del mestiere, non venditori.</p>
+
+                        <div class="chi-siamo-features">
+                            <div class="chi-siamo-feature">
+                                <div class="chi-siamo-feature-icon"></div>
+                                <span>Preventivi trasparenti</span>
+                            </div>
+                            <div class="chi-siamo-feature">
+                                <div class="chi-siamo-feature-icon"></div>
+                                <span>Ricambi certificati</span>
+                            </div>
+                            <div class="chi-siamo-feature">
+                                <div class="chi-siamo-feature-icon"></div>
+                                <span>Diagnosi computerizzata</span>
+                            </div>
+                            <div class="chi-siamo-feature">
+                                <div class="chi-siamo-feature-icon"></div>
+                                <span>Garanzia sui lavori</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Recensioni Clienti -->
+        <section class="recensioni" id="recensioni" aria-label="Recensioni clienti officina meccanica Maddaloni">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-tag">
+                        <span class="section-tag-line"></span>
+                        <span class="section-tag-text">Recensioni</span>
+                        <span class="section-tag-line"></span>
+                    </div>
+                    <h2>Cosa Dicono i Clienti</h2>
+                    <p>La fiducia dei nostri clienti &egrave; il nostro miglior biglietto da visita</p>
+                </div>
+
+                <div class="recensioni-grid" itemscope itemtype="https://schema.org/LocalBusiness">
+                    <meta itemprop="name" content="Officina De Rosa">
+                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="reviewCount" content="150">
+                    </div>
+
+                    <article class="recensione-card animate-on-scroll" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <span class="recensione-quote">"</span>
+                        <div class="recensione-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="recensione-text" itemprop="reviewBody">"Disponibilit&agrave; e competenza ad alti livelli! Non ho una Opel ma un Peugeot, tuttavia all'improvviso mentre ero per strada lontana da casa la macchina aveva cominciato a segnalare un problema di surriscaldamento. Non solo si sono messi a disposizione ma mi hanno momentaneamente risolto il problema in modo da tornare a casa con calma e risolvere definitivamente il problema."</p>
+                        <div class="recensione-author">
+                            <div class="recensione-avatar">E</div>
+                            <div class="recensione-info">
+                                <h4 itemprop="author">Edvige Cutillo</h4>
+                                <span>Local Guide Google</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="recensione-card animate-on-scroll" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <span class="recensione-quote">"</span>
+                        <div class="recensione-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="recensione-text" itemprop="reviewBody">"Ottimo per professionalit&agrave; e seriet&agrave;."</p>
+                        <div class="recensione-author">
+                            <div class="recensione-avatar">F</div>
+                            <div class="recensione-info">
+                                <h4 itemprop="author">Fabrizio Forgillo</h4>
+                                <span>Local Guide Google</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="recensione-card animate-on-scroll" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <span class="recensione-quote">"</span>
+                        <div class="recensione-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="recensione-text" itemprop="reviewBody">"Professionalit&agrave; e cortesia."</p>
+                        <div class="recensione-author">
+                            <div class="recensione-avatar">D</div>
+                            <div class="recensione-info">
+                                <h4 itemprop="author">Domenico</h4>
+                                <span>Local Guide Google</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Partner e Collaborazioni -->
+        <section class="partner" aria-label="Partner e collaborazioni officina De Rosa">
+            <div class="container">
+                <div class="partner-info animate-on-scroll">
+                    <h3>Hai un'auto a <span>noleggio</span>?</h3>
+                    <p>Siamo officina convenzionata con le principali societ&agrave; di noleggio a lungo termine. Se hai un'auto Ayvens, UnipolRental o AutoHero, puoi effettuare da noi <strong>tagliandi, manutenzione ordinaria e straordinaria a costo zero</strong>.</p>
+
+                    <div class="partner-benefits">
+                        <div class="partner-benefit">
+                            <div class="partner-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4M7 20h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v11a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="partner-benefit-text">
+                                <h4>COSTO ZERO</h4>
+                                <p>Manutenzione a carico della societ&agrave; di noleggio</p>
+                            </div>
+                        </div>
+
+                        <div class="partner-benefit">
+                            <div class="partner-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="1"/><path d="M12 6v6m0 6v-1M5.64 5.64l4.24 4.24m5.64 5.64l4.24 4.24M6 12H1m13 0h6M5.64 18.36l4.24-4.24M6.76 6.76l4.24-4.24"/></svg>
+                            </div>
+                            <div class="partner-benefit-text">
+                                <h4>CONVENZIONATO</h4>
+                                <p>Accreditamento diretto con le societ&agrave;</p>
+                            </div>
+                        </div>
+
+                        <div class="partner-benefit">
+                            <div class="partner-benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div class="partner-benefit-text">
+                                <h4>VELOCE</h4>
+                                <p>Interventi rapidi e tempestivi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partner-header">
+                <p>Officina convenzionata</p>
+            </div>
+            <div class="partner-track">
+                <div class="partner-logos">
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-ayvens-noleggio-lungo-termine.png" alt="Ayvens noleggio lungo termine partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-unipol-rental-noleggio.png" alt="UnipolRental noleggio auto partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-autohero-auto-usate.png" alt="AutoHero auto usate certificate partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-castrol-lubrificanti-olio-motore.png" alt="Castrol lubrificanti olio motore partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-ayvens-noleggio-lungo-termine.png" alt="Ayvens noleggio lungo termine partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-unipol-rental-noleggio.png" alt="UnipolRental noleggio auto partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-autohero-auto-usate.png" alt="AutoHero auto usate certificate partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-castrol-lubrificanti-olio-motore.png" alt="Castrol lubrificanti olio motore partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                </div>
+                <div class="partner-logos">
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-ayvens-noleggio-lungo-termine.png" alt="Ayvens noleggio lungo termine partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-unipol-rental-noleggio.png" alt="UnipolRental noleggio auto partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-autohero-auto-usate.png" alt="AutoHero auto usate certificate partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-castrol-lubrificanti-olio-motore.png" alt="Castrol lubrificanti olio motore partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-ayvens-noleggio-lungo-termine.png" alt="Ayvens noleggio lungo termine partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-unipol-rental-noleggio.png" alt="UnipolRental noleggio auto partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-autohero-auto-usate.png" alt="AutoHero auto usate certificate partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="img/partner/logo-castrol-lubrificanti-olio-motore.png" alt="Castrol lubrificanti olio motore partner officina Maddaloni" width="150" height="50" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contatti" id="contatti">
+            <div class="container">
+                <div class="contatti-inner">
+                    <div class="contatti-info animate-on-scroll">
+                        <div class="section-tag">
+                            <span class="section-tag-line"></span>
+                            <span class="section-tag-text">Contatti</span>
+                        </div>
+                        <h2>Parliamone</h2>
+                        <p>Passa in officina o chiamaci per un preventivo gratuito. Siamo a Maddaloni, in provincia di Caserta.</p>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>INDIRIZZO</h4>
+                                <p>Via Forche Caudine, 181, Maddaloni (CE)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>TELEFONO FISSO</h4>
+                                <a href="tel:+390823437304">0823 437304</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>CELLULARE</h4>
+                                <a href="tel:+393339635860">333 963 5860</a><br>
+                                <a href="tel:+393397889329">339 788 9329</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h4>ORARI</h4>
+                                <p>Lun-Ven: 8-13 / 14-19 | Sab: 8-13</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-box animate-on-scroll">
+                        <h3>Richiedi un appuntamento</h3>
+                        <form id="formContatto">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>NOME</label>
+                                    <input type="text" name="nome" required placeholder="Il tuo nome">
+                                </div>
+                                <div class="form-group">
+                                    <label>TELEFONO</label>
+                                    <input type="tel" name="telefono" required placeholder="Numero di telefono">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>SERVIZIO</label>
+                                <select name="servizio">
+                                    <option value="">Seleziona un servizio...</option>
+                                    <option>Tagliando</option>
+                                    <option>Riparazione</option>
+                                    <option>Revisione</option>
+                                    <option>Climatizzazione</option>
+                                    <option>Autoricambi</option>
+                                    <option>Check-Up Auto</option>
+                                    <option>Altro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>MESSAGGIO</label>
+                                <textarea name="messaggio" placeholder="Descrivi il problema o cosa ti serve..."></textarea>
+                            </div>
+                            <div class="form-btns">
+                                <button type="submit" class="btn btn-gold" style="flex:1">
+                                    Invia Richiesta
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </button>
+                                <a href="https://wa.me/393339635860" class="btn btn-wa">WhatsApp</a>
+                            </div>
+                            <div id="formMessage" style="display:none; margin-top:20px; padding:15px; text-align:center; border-radius:4px;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="mappa">
+            <a href="https://maps.app.goo.gl/F458PdP3yopENFVr9" target="_blank" rel="noopener" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; cursor: pointer;"></a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.3437!2d14.397231!3d41.038044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a536cf0a9d8b5:0x832a9445d456bc9f!2sOpel%20De%20Rosa%20Raffaele!5e0!3m2!1sit!2sit!4v1705689600000" loading="lazy" title="Mappa Officina Opel De Rosa Maddaloni" style="width: 100%; height: 450px; border: 0; filter: grayscale(100%) contrast(1.2) brightness(0.6); display: block; border-radius: 8px;"></iframe>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <img src="img/Opel-Logo (1).png" alt="Opel De Rosa logo">
+                        </div>
+                        <div class="logo-text">
+                            <div>Opel</div>
+                            <div class="logo-subtitle">De Rosa</div>
+                            <div class="logo-service">Service Autoricambi</div>
+                        </div>
+                    </a>
+                    <p>Officina meccanica a Maddaloni dal 1988. Specializzati Opel, lavoriamo su tutte le marche con passione e competenza.</p>
+                </div>
+
+                <div>
+                    <h4>SERVIZI</h4>
+                    <ul>
+                        <li><a href="#servizi">Tagliandi</a></li>
+                        <li><a href="#servizi">Riparazioni</a></li>
+                        <li><a href="#servizi">Revisioni</a></li>
+                        <li><a href="#servizi">Elettrauto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>CONTATTI</h4>
+                    <ul>
+                        <li><a href="tel:+390823XXXXXX">0823437304</a></li>
+                        <li><a href="https://wa.me/393339635860">WhatsApp</a></li>
+                        <li><a href="mailto:info@officinaderosa.it">Email</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>ORARI</h4>
+                    <ul>
+                        <li>Lun-Ven: 8-13 / 14-19</li>
+                        <li>Sabato: 8-13</li>
+                        <li>Domenica: Chiuso</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2024 Officina De Rosa - P.IVA 0823437304</span>
+                <span>Meccanico Maddaloni | Officina Maddaloni | Opel Maddaloni</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/393339635860" class="wa-float" aria-label="Contattaci su WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Form Web3Forms
+        document.getElementById('formContatto').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const msg = document.getElementById('formMessage');
+
+            btn.disabled = true;
+            btn.innerHTML = 'Invio in corso...';
+
+            const formData = new FormData(form);
+            formData.append('access_key', 'e353770e-5b46-4fe2-85f8-9c69227e1a82');
+            formData.append('subject', 'Nuova richiesta da Officina De Rosa');
+            formData.append('from_name', 'Sito Officina De Rosa');
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    msg.style.display = 'block';
+                    msg.style.background = 'rgba(201, 162, 39, 0.15)';
+                    msg.style.border = '1px solid var(--gold)';
+                    msg.style.color = 'var(--gold)';
+                    msg.innerHTML = '<strong>Richiesta inviata con successo!</strong><br>Ti ricontatteremo al pi&ugrave; presto.';
+                    form.reset();
+                } else {
+                    throw new Error('Errore invio');
+                }
+            } catch (error) {
+                msg.style.display = 'block';
+                msg.style.background = 'rgba(255, 0, 0, 0.1)';
+                msg.style.border = '1px solid #ff4444';
+                msg.style.color = '#ff4444';
+                msg.innerHTML = 'Errore nell\'invio. Riprova o contattaci telefonicamente.';
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = 'Invia Richiesta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        });
+
+    </script>
+
+</body>
+</html>
